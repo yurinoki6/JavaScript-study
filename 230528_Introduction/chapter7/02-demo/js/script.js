@@ -34,9 +34,14 @@ window.addEventListener('load',() => {
   );
   // ローディング中テキスト
   loadingTaxt.animate (
-    {
-      opacity:[1,0],
-    },
+    [
+      {
+        opacity: 1,
+      },
+      {
+        opacity: 0,
+      }
+    ],
     {
       duration: 1200,
       easing: 'ease',
