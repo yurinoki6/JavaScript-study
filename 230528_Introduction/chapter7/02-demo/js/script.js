@@ -2,7 +2,8 @@
 ローディングから画面遷移
 ================================================ */
 const loadingAreaGrey = document.querySelector('#loading');
-const loadingAreaGreen = document.querySelector('#loading-screen')
+const loadingAreaGreen = document.querySelector('#loading-screen');
+const loadingTaxt = document.querySelector('#loading p');
 
 window.addEventListener('load',() => {
   // ローディング中（グレースクリーン）
@@ -27,6 +28,17 @@ window.addEventListener('load',() => {
     {
       duration: 2000,
       delay: 800,
+      easing: 'ease',
+      fill: 'forwards',
+    }
+  );
+  // ローディング中テキスト
+  loadingTaxt.animate (
+    {
+      opacity:[1,0],
+    },
+    {
+      duration: 1200,
       easing: 'ease',
       fill: 'forwards',
     }
