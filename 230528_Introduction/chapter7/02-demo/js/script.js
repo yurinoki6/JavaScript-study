@@ -37,9 +37,11 @@ window.addEventListener('load',() => {
     [
       {
         opacity: 1,
+        offset: .8 //80%
       },
       {
         opacity: 0,
+        offset: 1 //80%
       }
     ],
     {
