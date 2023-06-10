@@ -1,6 +1,7 @@
 const menu = document.querySelector('#menu');
 
 const lists = [
+<<<<<<< HEAD
   {
     name: 'イチゴ',
     img: 'strawberry.jpg',
@@ -38,3 +39,18 @@ for(let i = 0; i < lists.length; i++){
   const content = `<div><img src="images/${img}" alt=""><h2>${name}</h2><p>${price}円</p></div>`;
   menu.insertAdjacentHTML('beforeend', content);
 }
+=======
+  'strawberry.jpg',
+  'lime.jpg',
+  'mango.jpg',
+  'lemon.jpg',
+  'fig.jpg',
+  'apple.jpg',
+];
+// console.log(lists.length);
+
+for(let i =0; i < lists.length; i++){
+  const content = `<div><img src="images/${lists[i]}" alt=""></div> `;
+  menu.insertAdjacentHTML('beforeend', content);
+}
+>>>>>>> main
