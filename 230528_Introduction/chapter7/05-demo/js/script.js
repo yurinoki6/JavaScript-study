@@ -58,4 +58,6 @@ window.addEventListener('load',() => {
 const mainImage = document.querySelector('.gallery-image img');
 const thumbImages = document.querySelectorAll('.gallery-thumbnails img');
 
-console.log(thumbImages);
+for(let i = 0; i < thumbImages.length; i++) {
+  console.log(thumbImages[i]);
+}
