@@ -59,5 +59,7 @@ const mainImage = document.querySelector('.gallery-image img');
 const thumbImages = document.querySelectorAll('.gallery-thumbnails img');
 
 for(let i = 0; i < thumbImages.length; i++) {
-  console.log(thumbImages[i]);
+  thumbImages[i].addEventListener('mouseover', () => {
+    console.log(thumbImages[i]);
+  });
 }
