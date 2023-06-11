@@ -3,25 +3,25 @@
 ================================================ */
 const loadingAreaGrey = document.querySelector('#loading');
 const loadingAreaGreen = document.querySelector('#loading-screen');
-const loadingText = document.querySelector('#loading p');
+const loadingTaxt = document.querySelector('#loading p');
 
-window.addEventListener('load', () => {
+window.addEventListener('load',() => {
   // ローディング中（グレースクリーン）
   loadingAreaGrey.animate(
     {
-      opacity: [1, 0],
-      visibility: 'hidden',
+      opacity: [1,0],
+      visibility:'hidden',
     },
     {
       duration: 2000,
       delay: 1200,
       easing: 'ease',
-      fill: 'forwards',
+      fill:'forwards',
     }
   );
 
   // ローディング中（薄緑スクリーン）
-  loadingAreaGreen.animate(
+  loadingAreaGreen.animate (
     {
       translate: ['0 100vh', '0 0', '0 -100vh']
     },
@@ -31,20 +31,19 @@ window.addEventListener('load', () => {
       easing: 'ease',
       fill: 'forwards',
     }
-  );  
-
+  );
   // ローディング中テキスト
-  loadingText.animate(
+  loadingTaxt.animate (
     [
       {
         opacity: 1,
-        offset: .8  //80%
+        offset: .8 //80%
       },
       {
         opacity: 0,
-        offset: 1  //100%
-      },
-    ], 
+        offset: 1 //80%
+      }
+    ],
     {
       duration: 1200,
       easing: 'ease',
@@ -56,20 +55,12 @@ window.addEventListener('load', () => {
 /*
 画像ギャラリー
 ================================================ */
-/* ----- ↓↓ 追加 ↓↓ ----- */
 const mainImage = document.querySelector('.gallery-image img');
 const thumbImages = document.querySelectorAll('.gallery-thumbnails img');
 
-// for(let i = 0; i < thumbImages.length; i++) {
-//   thumbImages[i].addEventListener('mouseover', (event) => {
-//       mainImage.src = event.target.src;
-//       mainImage.animate({opacity: [0, 1]}, 500);
-//   });
-// }
-thumbImages.forEach((thumbImage)=>{
-  thumbImage.addEventListener('mouseover', (event) => {
+thumbImages.forEach((thumbImages)=>{
+  thumbImages.addEventListener('mouseover', (event) => {
     mainImage.src = event.target.src;
     mainImage.animate({opacity: [0, 1]}, 500);
   });
-});
-/* ----- ↑↑ 追加 ↑↑ ----- */
+})

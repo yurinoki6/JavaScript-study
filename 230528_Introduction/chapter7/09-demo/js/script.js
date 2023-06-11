@@ -69,11 +69,10 @@ thumbImages.forEach((thumbImage)=>{
 /*
 スライドメニュー
 ================================================ */
-/* ----- ↓↓ 追加 ↓↓ ----- */
 const menuOpen = document.querySelector('#menu-open');
 const menuClose = document.querySelector('#menu-close');
 const menuPanel = document.querySelector('#menu-panel');
-const menuItems = document.querySelectorAll('#menu-panel li');
+const menuItem = document.querySelectorAll('#menu-panel li');
 const menuOptions = {
   duration: 1400,
   easing: 'ease',
@@ -84,9 +83,9 @@ const menuOptions = {
 menuOpen.addEventListener('click', () => {
   menuPanel.animate({translate: ['100vw', 0]}, menuOptions);
 
-  // リンクをひとつずつ順に表示
-  menuItems.forEach((menuItem, index) => {
-    //console.log(`${index}番目のリスト`);
+  // リンクを一つずつ順に表示
+  menuItem.forEach((menuItem,index) => {
+    console.log(`${index}番目のリスト`);
     menuItem.animate(
       {
         opacity: [0, 1],
@@ -103,10 +102,9 @@ menuOpen.addEventListener('click', () => {
 });
 
 // メニューを閉じる
-menuClose.addEventListener('click', () => {
-  menuPanel.animate({translate: [0, '100vw']}, menuOptions);
-  menuItems.forEach((menuItem) => {
+menuClose.addEventListener('click',() => {
+  menuPanel.animate({translate: [0, '100vw']},menuOptions);
+  menuItem.forEach((menuItem) => {
     menuItem.animate({opacity: [1, 0]}, menuOptions);
   });
 });
-/* ----- ↑↑ 追加 ↑↑ ----- */
