@@ -120,7 +120,19 @@ menuClose.addEventListener('click', () => {
 const animateFade = (entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      console.log(entry.target);
+      // console.log(entry.target);
+      entry.target.animate(
+        {
+          opacity: [0,1],
+          filter: ['blur(.4rem)','blur(0)'],
+          translate: ['0 4rem', 0],
+        },
+        {
+          duration: 2000,
+          easing: 'ease',
+          fill: 'forwards',
+        }
+      );
     }
   });
 };
