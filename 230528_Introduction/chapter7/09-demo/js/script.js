@@ -84,8 +84,8 @@ menuOpen.addEventListener('click', () => {
   menuPanel.animate({translate: ['100vw', 0]}, menuOptions);
 
   // リンクを一つずつ順に表示
-  menuItem.forEach((menuItem) => {
-    // console.log(menuItem);
+  menuItem.forEach((menuItem,index) => {
+    console.log(`${index}番目のリスト`);
     menuItem.animate(
       {
         opacity: [0, 1],
@@ -93,6 +93,7 @@ menuOpen.addEventListener('click', () => {
       },
       {
         duration: 2400,
+        delay: 300 * index,
         easing: 'ease',
         fill: 'forwards',
       }
