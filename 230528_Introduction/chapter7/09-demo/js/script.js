@@ -104,4 +104,7 @@ menuOpen.addEventListener('click', () => {
 // メニューを閉じる
 menuClose.addEventListener('click',() => {
   menuPanel.animate({translate: [0, '100vw']},menuOptions);
+  menuItem.forEach((menuItem) => {
+    menuItem.animate({opacity: [1, 0]}, menuOptions);
+  });
 });
