@@ -85,7 +85,18 @@ menuOpen.addEventListener('click', () => {
 
   // リンクを一つずつ順に表示
   menuItem.forEach((menuItem) => {
-    console.log(menuItem);
+    // console.log(menuItem);
+    menuItem.animate(
+      {
+        opacity: [0, 1],
+        translate: ['2rem', 0],
+      },
+      {
+        duration: 2400,
+        easing: 'ease',
+        fill: 'forwards',
+      }
+    );
   });
 });
 
