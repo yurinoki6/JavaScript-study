@@ -72,6 +72,7 @@ thumbImages.forEach((thumbImage)=>{
 const menuOpen = document.querySelector('#menu-open');
 const menuClose = document.querySelector('#menu-close');
 const menuPanel = document.querySelector('#menu-panel');
+const menuItem = document.querySelectorAll('#menu-panel li');
 const menuOptions = {
   duration: 1400,
   easing: 'ease',
@@ -80,8 +81,12 @@ const menuOptions = {
 
 // メニューを開く
 menuOpen.addEventListener('click', () => {
-  // console.log('メニューを開く');
   menuPanel.animate({translate: ['100vw', 0]}, menuOptions);
+
+  // リンクを一つずつ順に表示
+  menuItem.forEach((menuItem) => {
+    console.log(menuItem);
+  });
 });
 
 // メニューを閉じる
