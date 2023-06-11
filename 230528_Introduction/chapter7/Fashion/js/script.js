@@ -117,8 +117,12 @@ menuClose.addEventListener('click', () => {
 スクロールで要素を表示
 ================================================ */
 //監視対象が範囲内に現れたら実行する動作
-const animateFade = () => {
-  console.log('ふわっ');
+const animateFade = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      console.log(entry.target);
+    }
+  });
 };
 
 // 監視設定
