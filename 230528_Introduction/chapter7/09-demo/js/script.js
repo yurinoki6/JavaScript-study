@@ -69,3 +69,11 @@ thumbImages.forEach((thumbImage)=>{
 /*
 スライドメニュー
 ================================================ */
+const menuOpen = document.querySelector('#menu-open');
+const menuClose = document.querySelector('#menuClose');
+const menuPanel = document.querySelector('#menu-Panel');
+
+// メニューを開く
+menuOpen.addEventListener('click', () => {
+  console.log('メニューを開く');
+});
